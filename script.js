@@ -63,7 +63,8 @@ const playGame = () => {
                     break;
             };
         };
-    // Uncomment when the score is not yet 5 
+    // Uncomment when want the condition to be: 
+    // While score is not yet 5 keep playing 
     // while (humanScore < 5 && computerScore < 5){
     //     playRound(getHumanChoice(), "rock");
     // };
