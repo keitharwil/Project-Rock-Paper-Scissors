@@ -24,8 +24,7 @@ const getHumanChoice = () => {
 const playGame = () => {
     let humanScore = 0; 
     let computerScore = 0;
-    let winner;
-
+    
         const playRound = (humanChoice, computerChoice) => {
             let outcome;
 
@@ -70,7 +69,9 @@ const playGame = () => {
     // };
 
     for (let i = 0; i < 5; i++){ playRound(getHumanChoice(), getComputerChoice()) };
-    
+    (humanScore == computerScore) ? console.log(`IT'S A DRAW!`) : 
+    (humanScore > computerScore) ? console.log(`YOU WIN!!!`) :
+    console.log(`YOU LOSE :(`)   
 }
 
 playGame()
