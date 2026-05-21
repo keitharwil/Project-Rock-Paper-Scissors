@@ -1,0 +1,20 @@
+.buttonContainer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 13px;
+    padding: 5px 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+}

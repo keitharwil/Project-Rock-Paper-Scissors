@@ -69,10 +69,10 @@ const playGame = () => {
     //     playRound(getHumanChoice(), "rock");
     // };
 
-    for (let i = 0; i < 5; i++){ playRound(getHumanChoice(), getComputerChoice()) };
-    (humanScore == computerScore) ? console.log(`IT'S A DRAW!`) : 
-    (humanScore > computerScore) ? console.log(`YOU WIN!!!`) :
-    console.log(`YOU LOSE :(`)   
+    const rockButton = document.querySelector("#rockButton");
 }
+
+
+
 
 playGame()
