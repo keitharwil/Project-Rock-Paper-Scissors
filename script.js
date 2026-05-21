@@ -63,16 +63,32 @@ const playGame = () => {
                     break;
             };
         };
+        
     // Uncomment when want the condition to be: 
     // While score is not yet 5 keep playing 
     // while (humanScore < 5 && computerScore < 5){
     //     playRound(getHumanChoice(), "rock");
     // };
 
-    const rockButton = document.querySelector("#rockButton");
-}
+    let choices = document.querySelector(".buttonContainer");
 
+    choices.addEventListener('click', (event) => {
+        let target = event.target;
 
+        switch(target.id){
+            case 'rockButton':
+                playRound("rock", getComputerChoice());
+                break;
+            case 'paperButton':
+                playRound("paper", getComputerChoice());
+                break;
+            case 'scissorsButton':
+                playRound("scissors", getComputerChoice());
+                break;
+        }
 
+    });
+
+};
 
 playGame()
