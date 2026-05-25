@@ -8,11 +8,21 @@
     <title>RockPaperScissors</title>
 </head>
 <body>
-    
+    <h1 class="header"> Rock Paper Scissors </h1>
+    <div class="resultContainer">
+        <div class="results description">
+            <h1 id="outcomeAnnounce"> Press any button to start </h1>
+            <h1 id="scores"> 👨 Score: 0 | 🖥️ Score: 0 </h1>
+        </div>
+        <div class="results choices">
+            <h1 id="humanChoice" >👨 Choice: </h1>
+            <h1 id="computerChoice" >🖥️ Choice: </h1>
+        </div>
+    </div>
     <div class="buttonContainer">
-        <button id="rockButton">Rock</button>
-        <button id="paperButton" >Paper</button>
-        <button id="scissorsButton">Scissors</button>
+        <button id="rockButton"><img src="images/rock.webp" class="choicePictures">ROCK</button>
+        <button id="paperButton"><img src="images/paper.webp" class="choicePictures">PAPER</button>
+        <button id="scissorsButton"><img src="images/scissors.webp" class="choicePictures">SCISSORS</button>
     </div>
 </body>
 </html>

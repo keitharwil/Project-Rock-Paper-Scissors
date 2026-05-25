@@ -1,20 +1,68 @@
-.buttonContainer{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-button{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10dvh;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    font-size: 1.2rem;
     font-weight: bold;
     border: none;
-    border-radius: 13px;
+    border-radius: 20px;
     padding: 5px 10px;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     color: white;
     background-color: gray;
+}
+
+.header {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.choicePictures {
+    pointer-events: none;
+    border-radius: 10px;
+    width: auto;
+    height: 20rem;
+}
+
+.resultContainer {
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.results {
+    background-color: rgb(237, 233, 233);
+    border-radius: 20px;
+    margin: 0;
+    padding: .5rem;
+}
+
+.results.description {
+    flex-grow: 2;
+}
+
+.results.choices {
+    flex-grow: 1;
+}
+
+h1 {
+    margin: 0;
 }

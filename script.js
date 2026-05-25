@@ -12,22 +12,12 @@ const getComputerChoice = () => {
     };
 };
 
-const getHumanChoice = () => {
-    let humanChoice = prompt("ROCK PAPER Scissors").toLowerCase();
-    if (humanChoice == "ROCK" || humanChoice == "PAPER" || humanChoice == "SCISSORS") {
-        return humanChoice;
-    } else {
-        alert("Only input (ROCK PAPER Scissors)");
-    }
-};
-
 const playGame = () => {
     let humanScore = 0; 
     let computerScore = 0;
     
         const playRound = (humanChoice, computerChoice) => {
             let outcome;
-
             if (humanChoice == computerChoice){
                 outcome = "draw"
             }  else if (humanChoice == "PAPER"    && computerChoice == "ROCK" || 
@@ -39,31 +29,36 @@ const playGame = () => {
                        computerChoice == "SCISSORS" && humanChoice == "PAPER"){
                             outcome = "lose";
             };
+            playResults(outcome, humanChoice, computerChoice);
+        };
 
+        const playResults = (outcome, humanChoice, computerChoice) => {
+            let outcomeAnnounce = document.querySelector("#outcomeAnnounce");
+            let scores = document.querySelector("#scores");
+            let humanChoiceDisplay = document.querySelector("#humanChoice");
+            let computerChoiceDisplay = document.querySelector("#computerChoice");
             switch(outcome){
                 case "win":
-                    console.log(`${humanChoice.toUpperCase()} and ${computerChoice.toUpperCase()}`);
-                    console.log("You WIN this round!");
+                    humanChoiceDisplay.textContent = `👨 Choice: ${humanChoice}`;
+                    computerChoiceDisplay.textContent = `🖥️ Choice: ${computerChoice}`;
+                    outcomeAnnounce.textContent = "You WIN this round!";
                     humanScore++;
-                    console.log(`Your score: ${humanScore} | Computer Score: ${computerScore}`);
+                    scores.textContent= `👨 Score: ${humanScore} | 🖥️ Score: ${computerScore}`;
                     break;
                 case "lose":
-                    console.log(`${humanChoice.toUpperCase()} and ${computerChoice.toUpperCase()}`);
-                    console.log("You LOSE this round :(");
+                    humanChoiceDisplay.textContent = `👨 Choice: ${humanChoice}`;
+                    computerChoiceDisplay.textContent = `🖥️ Choice: ${computerChoice}`;                  outcomeAnnounce.textContent = "You LOSE this round :(";
                     computerScore++;
-                    console.log(`Your score: ${humanScore} | Computer Score: ${computerScore}`);
+                    scores.textContent = `👨 Score: ${humanScore} | 🖥️ Score: ${computerScore}`;
                     break;
                 case "draw":
-                    console.log(`${humanChoice.toUpperCase()} and ${computerChoice.toUpperCase()}`);
-                    console.log("It's a draw");
-                    console.log(`Your score: ${humanScore} | Computer Score: ${computerScore}`);
-                    break;
-                default:
-                    console.log("Error");
+                    humanChoiceDisplay.textContent = `👨 Choice: ${humanChoice}`;
+                    computerChoiceDisplay.textContent = `🖥️ Choice: ${computerChoice}`; 
+                    outcomeAnnounce.textContent = "It's a DRAW";
                     break;
             };
         };
-        
+
     // Uncomment when want the condition to be: 
     // While score is not yet 5 keep playing 
     // while (humanScore < 5 && computerScore < 5){
@@ -92,5 +87,4 @@ const playGame = () => {
 };
 
 
-
-playGame()
+playGame();
