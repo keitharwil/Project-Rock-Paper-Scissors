@@ -64,7 +64,7 @@ const playGame = () => {
     // while (humanScore < 5 && computerScore < 5){
     //     playRound(getHumanChoice(), "ROCK");
     // };
-
+    
     let choices = document.querySelector(".buttonContainer");
 
     choices.addEventListener('click', (event) => {
