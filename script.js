@@ -2,22 +2,22 @@ const getComputerChoice = () => {
     let choice = Math.floor(Math.random() * 3) + 1;
     switch(choice) {
         case 1:
-            return "rock"
+            return "ROCK"
         case 2:
-            return "paper"
+            return "PAPER"
         case 3:
-            return "scissors"
+            return "SCISSORS"
         default:
             alert("There seems to be an error with the AI")
     };
 };
 
 const getHumanChoice = () => {
-    let humanChoice = prompt("Rock Paper Scissors").toLowerCase();
-    if (humanChoice == "rock" || humanChoice == "paper" || humanChoice == "scissors") {
+    let humanChoice = prompt("ROCK PAPER Scissors").toLowerCase();
+    if (humanChoice == "ROCK" || humanChoice == "PAPER" || humanChoice == "SCISSORS") {
         return humanChoice;
     } else {
-        alert("Only input (Rock Paper Scissors)");
+        alert("Only input (ROCK PAPER Scissors)");
     }
 };
 
@@ -30,13 +30,13 @@ const playGame = () => {
 
             if (humanChoice == computerChoice){
                 outcome = "draw"
-            }  else if (humanChoice == "paper"    && computerChoice == "rock" || 
-                        humanChoice == "rock"     && computerChoice == "scissors" ||
-                        humanChoice == "scissors" && computerChoice == "paper"){
+            }  else if (humanChoice == "PAPER"    && computerChoice == "ROCK" || 
+                        humanChoice == "ROCK"     && computerChoice == "SCISSORS" ||
+                        humanChoice == "SCISSORS" && computerChoice == "PAPER"){
                             outcome = "win";
-            } else if (computerChoice == "paper"    && humanChoice == "rock" || 
-                       computerChoice == "rock"     && humanChoice == "scissors" ||
-                       computerChoice == "scissors" && humanChoice == "paper"){
+            } else if (computerChoice == "PAPER"    && humanChoice == "ROCK" || 
+                       computerChoice == "ROCK"     && humanChoice == "SCISSORS" ||
+                       computerChoice == "SCISSORS" && humanChoice == "PAPER"){
                             outcome = "lose";
             };
 
@@ -67,7 +67,7 @@ const playGame = () => {
     // Uncomment when want the condition to be: 
     // While score is not yet 5 keep playing 
     // while (humanScore < 5 && computerScore < 5){
-    //     playRound(getHumanChoice(), "rock");
+    //     playRound(getHumanChoice(), "ROCK");
     // };
 
     let choices = document.querySelector(".buttonContainer");
@@ -77,18 +77,20 @@ const playGame = () => {
 
         switch(target.id){
             case 'rockButton':
-                playRound("rock", getComputerChoice());
+                playRound("ROCK", getComputerChoice());
                 break;
             case 'paperButton':
-                playRound("paper", getComputerChoice());
+                playRound("PAPER", getComputerChoice());
                 break;
             case 'scissorsButton':
-                playRound("scissors", getComputerChoice());
+                playRound("SCISSORS", getComputerChoice());
                 break;
         }
 
     });
 
 };
+
+
 
 playGame()
