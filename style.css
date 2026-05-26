@@ -66,3 +66,21 @@ button:hover {
 h1 {
     margin: 0;
 }
+
+h2 {
+    margin: 0;
+}
+
+#gameover-dialog {
+    border: none;
+    border-radius: 10px;
+    width: 20rem;
+    height: 10rem;
+}
+
+#close-button {
+    display: block;
+    height: auto;
+    width: 20dvw;
+    margin: auto;
+}
