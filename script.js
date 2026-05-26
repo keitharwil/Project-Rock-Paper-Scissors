@@ -51,7 +51,8 @@ const playGame = () => {
                 break;
             case "lose":
                 humanChoiceDisplay.textContent = `👨 Choice: ${humanChoice}`;
-                computerChoiceDisplay.textContent = `🖥️ Choice: ${computerChoice}`;                  outcomeAnnounce.textContent = "You LOSE this round :(";
+                computerChoiceDisplay.textContent = `🖥️ Choice: ${computerChoice}`;                  
+                outcomeAnnounce.textContent = "You LOSE this round :(";
                 computerScore++;
                 scores.textContent = `👨 Score: ${humanScore} | 🖥️ Score: ${computerScore}`;
                 break;
