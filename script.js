@@ -12,6 +12,8 @@ const getComputerChoice = () => {
     };
 };
 
+//dis not pushing?
+
 const playGame = () => {
     let humanScore = 0; 
     let computerScore = 0;
